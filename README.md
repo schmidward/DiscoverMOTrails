@@ -2,9 +2,7 @@
 
 ---
 ## :technologist: Project Setup
-
 ---
-
 ### React frontend
 1. Navigate to the `\frontend` folder and run `npm install`.
 
