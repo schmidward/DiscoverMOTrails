@@ -40,16 +40,16 @@ public class ProjectSecurityConfig {
         requestHandler.setCsrfRequestAttributeName("_csrf");
 
 
-        //csrf disabled here to make basic things work for now. Will need to properly implement into the future
+
         http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
                 .cors().configurationSource(new CorsConfigurationSource() {
                     @Override
                     public CorsConfiguration getCorsConfiguration(HttpServletRequest request) {
                         CorsConfiguration configuration = new CorsConfiguration();
                         configuration.setAllowedOrigins(Collections.singletonList("http://localhost:3000"));
-                        configuration.setAllowedMethods(Collections.singletonList("*"));
+                        configuration.setAllowedMethods(Collections.singletonList("*")); //GET, POST, PUT, DELETE
                         configuration.setAllowCredentials(true);
-                        configuration.setAllowedHeaders(Collections.singletonList("*"));
+                        configuration.setAllowedHeaders(Collections.singletonList("*")); // 'Content-Type': 'application/json'
                         configuration.setExposedHeaders(Arrays.asList("Authorization", "X-XSRF-TOKEN"));
                         configuration.setMaxAge(3600L);
                         return configuration;

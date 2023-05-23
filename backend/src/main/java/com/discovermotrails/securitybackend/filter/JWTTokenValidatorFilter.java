@@ -1,5 +1,6 @@
 package com.discovermotrails.securitybackend.filter;
 
+import com.discovermotrails.securitybackend.constants.SecurityConstants;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;

@@ -19,9 +19,10 @@ for the IntelliJ to recognize the Gradle project to run.
 ```
 3. Create the JWT Key
    * Inside `com.discovermotrails.securitybackend`, create a `constants` package.
-   * Inside the `constants` package create an **_interface_** with the file name: `SecurityConstants` with the following code:
+   * Inside the `constants` package create an **_interface_** with the file name: `SecurityConstants` with the code below:
      * NOTE: IntelliJ will ask if you want to stage the file to commit to Git. ***DO NOT DO THIS.*** The `.gitignore` ensures this
        file and the authorization key inside of it is not tracked.
+   * Don't forget to import the `SecurityConstants` class into both the `JWTTokenGeneratorFilter` and `JWTTokenValidatorFilter`
 
 ```agsl
 package com.discovermotrails.securitybackend.constants;

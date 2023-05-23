@@ -31,7 +31,7 @@ public class DMTUsernamePwdAuthenticationProvider implements AuthenticationProvi
 
     @Override
     public Authentication authenticate(Authentication authentication) throws AuthenticationException {
-        String username = authentication.getName();
+        String username = authentication.getName(); //email
         String pwd = authentication.getCredentials().toString();
         Optional<User> optionalUser = userRepository.findByEmail(username);
         if (optionalUser.isPresent()) {
