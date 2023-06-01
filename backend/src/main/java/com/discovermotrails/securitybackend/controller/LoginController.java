@@ -61,6 +61,12 @@ public class LoginController {
         return response;
     }
 
+    @RequestMapping("/login")
+    public String login () {
+        return "I am a login page maybe?";
+    }
+
+
     @RequestMapping("/user")
     public User getUserDetailsAfterLogin(Authentication authentication) {
         User loadedUser = null;
