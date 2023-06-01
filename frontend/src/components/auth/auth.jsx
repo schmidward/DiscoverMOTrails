@@ -27,6 +27,7 @@ const Login = () => {
 
   const authenticate = async (e) => {
     e.preventDefault();
+    try {
     const response = await (
       axios.get(LOGIN_URL, {
       auth: {
@@ -36,6 +37,7 @@ const Login = () => {
       
     }
     ));
+    console.log(response);
     setCookie('XSRF-TOKEN', response.headers["x-xsrf-token"]);
     setCookie('Authorization', response.headers.authorization, { maxAge: 10000}); //maxAge counts in seconds
     logIn(response.data.id, response.data.displayName, response.data.username, response.data.isLoggedIn);
@@ -43,7 +45,10 @@ const Login = () => {
     setFormUser('');
 		setPwd('');
 		setSuccess(true);
+  } catch (err) {
+    console.log(err);
   }
+}
 
   return (
     <>
