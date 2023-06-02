@@ -68,6 +68,7 @@ const Register = () => {
             );
             setSuccess(true);
             //Reset the stored user/password information back to nothing
+            setDisplayName("");
             setEmail("");
             setPwd("");
             setMatchPwd("");

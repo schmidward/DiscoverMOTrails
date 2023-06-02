@@ -21,20 +21,28 @@ function SecurePage() {
         withCredentials: true,
         }
     ));
-    return setData(response.data);
+    // return setData(response.data);
     }, []);
 
 
-    if (!data) {
-        return <p>Loading...</p>
-    }
+    // if (!data) {
+    //     return <p>Loading...</p>
+    // }
     
     return (
         <>
         <div>
-            <h1>Protected page</h1>
+            <h3>You are now logged in:</h3>
             <p>{data}</p>
         </div>
+
+            
+        <div>
+          <p>User ID: {user.id}</p>
+          <p>Username: {user.displayName}</p>
+          <p>User Email: {user.email}</p>
+        </div>
+
         </>
     );
 }

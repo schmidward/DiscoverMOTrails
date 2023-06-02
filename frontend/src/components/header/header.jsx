@@ -9,19 +9,24 @@ function Header() {
     const loggedInStatus = () => {
         if (user.isLoggedIn === false) {
             return {
-                path: '/login',
+                path: '/secure',
                 displayText: 'Login',
-                msg: 'You are not logged in'
+                msg: 'You are not logged in',
+                visibleDash: {display: "none"},
+                visibleRegister: {display: "block"}
             };
         } else {
             return {
                 path: '/logout',
                 displayText: 'Logout',
-                msg: `Logged in as: ${user.displayName}`
+                msg: `Logged in as: ${user.displayName}`,
+                visibleDash: {display: "block"},
+                visibleRegister: {display: "none"}
             };
             
         }
     }
+
 
     return (
         <>
@@ -35,8 +40,11 @@ function Header() {
                         <li>
                             <Link to="/">Home</Link>
                         </li>
-                        <li>
+                        <li style={loggedInStatus().visibleRegister}>
                             <Link to="/Register">Register</Link>
+                        </li>
+                        <li style={loggedInStatus().visibleDash}>
+                            <Link to='/secure'>Dashboard</Link>
                         </li>
                         <li>
                             <Link to={loggedInStatus().path}>{loggedInStatus().displayText}</Link>

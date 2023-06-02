@@ -47,6 +47,12 @@ const Login = () => {
 		setSuccess(true);
   } catch (err) {
     console.log(err);
+    if (!err.response) {
+      setErrMsg("No Server Response")
+    } else if (err.response.status === 401) {
+        setErrMsg("Invalid Credentials")
+    } 
+    errRef.current.focus();
   }
 }
 
@@ -90,14 +96,6 @@ const Login = () => {
             </span>
           </p>
         </section>
-    
-    
-   
-        <div>
-          <p>User ID: {user.id}</p>
-          <p>User display name: {user.displayName}</p>
-          <p>User Email: {user.email}</p>
-        </div>
     </>
   );
 }
