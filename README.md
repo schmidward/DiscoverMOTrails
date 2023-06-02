@@ -81,21 +81,9 @@ the fields for displayName, email, password and role (which is assigned automati
 }
 ```
 ### Testing 
-Once a user is registered into the database, they should be able to log in and make a GET request to `/secure`. Achieve this by going to http://localhost:3000/secure
-with both the frontend and backend applications running. A successful login will return "This is a page protected by login" below the "Protected Page" text. A failed login
-will result in plain HTML text on the page below "Protected Page."
+Once a user is registered into the database, they will be able to log in using the `/login` link in the nav bar. A successful login will return a page listing the user's ID number, username and email.
+A failed login will return `Invalid Credentials` on the login form.
 
-### Known issues/Bugs
-* Success/Error handling from server to the frontend: 
-  * If a user fails a login, there is no error sent to the frontend telling them why they aren't authenticated.
-  * If a user successfully registers via the frontend, there is no success message displayed on the register form.
-  * If a user tries to access `/secure` and fails the authentication, the application doesn't send them to re-login
 
-* Potential fixes include:
-  * Re-writing backend controllers to return `ResponseEntity`'s that convey the HttpStatus
-    * 200 for Success and a version of 400 for Failure
-    * Also requires updating the frontend logic to catch these errors
-  * Update the login operation from a GET request to POST
-  * Dive into the Spring Security defaults to return HttpStatus instead of a plain HTML login form when a user
-fails to authenticate
+
 
