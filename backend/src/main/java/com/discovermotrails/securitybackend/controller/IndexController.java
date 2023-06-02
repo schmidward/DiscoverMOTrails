@@ -12,9 +12,9 @@ public class IndexController {
         return "Hello World!";
     }
 
+    //TODO: Can update this to serve some kind of dashboard functionality
     @GetMapping("/secure")
-    public String renderSecureResource() {
-        return "This is a page protected by login";
+    public void renderSecureResource() {
     }
 
 }
