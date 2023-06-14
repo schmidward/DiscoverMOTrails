@@ -32,8 +32,7 @@ public interface SecurityConstants {
 4. Set the runtime environmental variables
     * Open the right hand `Gradle` tab and double click `bootRun`. ***The build will fail, and this is okay.***
     * In the upper right hand corner, next to the play button, click on the dropdown and select `Edit Configurations...`.
-    * Establish variables for: `DB_HOSTNAME`, `DB_PORT`, `DB_DATABASE`, `DB_USER`, `DB_PASSWORD`. Eric will provide these
-      for you.
+    * Establish variables for: `DB_HOSTNAME`, `DB_PORT`, `DB_DATABASE`, `DB_USER`, `DB_PASSWORD`.
         * Having trouble setting environmental variables? [Refer to this documentation from LaunchCode.](https://education.launchcode.org/gis-devops/configurations/02-environment-variables-intellij/index.html)
     * _This backend/frontend combination can also work with locally stored MySQL database instances._
 5. The project should compile and run correctly on `http://localhost:8080`.
