@@ -34,7 +34,7 @@ public interface SecurityConstants {
     * In the upper right hand corner, next to the play button, click on the dropdown and select `Edit Configurations...`.
     * Establish variables for: `DB_HOSTNAME`, `DB_PORT`, `DB_DATABASE`, `DB_USER`, `DB_PASSWORD`.
         * Having trouble setting environmental variables? [Refer to this documentation from LaunchCode.](https://education.launchcode.org/gis-devops/configurations/02-environment-variables-intellij/index.html)
-    * _This backend/frontend combination can also work with locally stored MySQL database instances._
+    * _This backend/frontend combination can work with locally stored MySQL database instances and those in AWS._
 5. The project should compile and run correctly on `http://localhost:8080`.
 ## :closed_lock_with_key: User Authentication and Authorization
 ### Overview
