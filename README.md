@@ -1,4 +1,4 @@
-# DiscoverMOTrails 
+# REACT Authorization Context
 
 
 ## :technologist: Project Setup

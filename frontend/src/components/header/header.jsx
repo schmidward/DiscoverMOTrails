@@ -33,7 +33,7 @@ function Header() {
         <header>
             <div className='header-container'>
             <div className='logo'>
-                <h1><Link to="/">DiscoverMOTrails</Link></h1>
+                <h1><Link to="/">REACT Auth Context</Link></h1>
             </div>
                 <nav>
                     <ul className='nav-links'>
