@@ -28,7 +28,7 @@ const Register = () => {
     const [validMatch, setValidMatch] = useState(false);
     const [matchFocus, setMatchFocus] = useState(false);
     const [errMsg, setErrMsg] = useState("");
-    const [success, setSuccess] = useState(false);
+    const [success, setSuccess] = useState("");
     const role = 'user';
 
     useEffect(() => {
@@ -66,7 +66,7 @@ const Register = () => {
                     withCredentials: true,
                 }
             );
-            setSuccess(true);
+            setSuccess("User Successfully Registered");
             //Reset the stored user/password information back to nothing
             setDisplayName("");
             setEmail("");
@@ -94,6 +94,12 @@ const Register = () => {
                 aria-live="assertive"
                 >
                     {errMsg}
+                </p>
+                <p 
+                className={success ? "successmsg" : "offscreen"}
+                aria-live="assertive"
+                >
+                    {success}
                 </p>
                 <h1>Register</h1>
                     <form onSubmit={handleSubmit}>

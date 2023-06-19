@@ -111,6 +111,14 @@ button {
   margin-bottom: 0.5rem;
 }
 
+.successmsg {
+  background-color: rgb(219, 219, 219);
+  color: rgb(34, 178, 75);
+  font-weight: bold;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
 .line {
   display: inline-block;
 }
