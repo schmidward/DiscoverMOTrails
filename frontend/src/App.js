@@ -30,7 +30,7 @@ function App() {
           <Route path="/login" exact element={<Login />} />
           <Route path="/register" exact element={<Register />} />
           <Route 
-              path="/secure" 
+              path="/user" 
               element={
               <Protected>
                 <SecurePage /> 
