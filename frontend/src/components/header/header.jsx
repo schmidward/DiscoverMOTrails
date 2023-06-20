@@ -9,7 +9,7 @@ function Header() {
     const loggedInStatus = () => {
         if (user.isLoggedIn === false) {
             return {
-                path: '/secure',
+                path: '/user',
                 displayText: 'Login',
                 msg: 'You are not logged in',
                 visibleDash: {display: "none"},
